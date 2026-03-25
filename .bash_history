@@ -651,3 +651,15 @@ nano bot.js
 git add .
 git commit -m "fix bot response"
 git push origin main
+nano bot.js
+git add .
+git commit -m "disable mongo fix error"
+git push origin main
+nano bot.js
+git add .
+git commit -m "fix: remove mongodb"
+git push origin main
+nano bot.js
+git add .
+git commit -m "fix model typo"
+git push origin main
