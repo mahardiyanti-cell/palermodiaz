@@ -678,3 +678,8 @@ git push origin main
 git commit -m "fix: new telegram token"
 git push
 git push --set-upstream origin main
+nano bot.js
+git add .
+git commit -m "add stock analysis"
+git push
+git push --set-upstream origin main
