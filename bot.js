@@ -23,7 +23,7 @@ bot.on("text", async (ctx) => {
     const userMessage = ctx.message.text;
 
     const response = await openai.responses.create({
-      model: "gpt-4.1-mini",
+      model: "gpt-4o-mini",
       input: userMessage,
     });
 

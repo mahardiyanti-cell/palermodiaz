@@ -647,3 +647,7 @@ git checkout --ours bot.js
 git add bot.js
 git commit -m "fix conflict"
 git push origin main
+nano bot.js
+git add .
+git commit -m "fix bot response"
+git push origin main
