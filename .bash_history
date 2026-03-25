@@ -633,3 +633,17 @@ git push origin main
 git push --set-upstream origin main
 git pull origin main --allow-unrelated-histories
 git push origin main
+nano bot.js
+git add
+git add.
+git add .
+git commit -m "fix openai response"
+git push origin main
+nano bot.js
+git add .
+git commit -m "fix bot"
+git push origin main
+git checkout --ours bot.js
+git add bot.js
+git commit -m "fix conflict"
+git push origin main

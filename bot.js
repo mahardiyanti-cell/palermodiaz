@@ -23,16 +23,18 @@ bot.on("text", async (ctx) => {
     const userMessage = ctx.message.text;
 
     const response = await openai.responses.create({
-  model: "gpt-4.1-mini",
-  input: userMessage,
-});
+      model: "gpt-4.1-mini",
+      input: userMessage,
+    });
 
-const reply = response.output[0].content[0].text;
+    const reply = response.output_text || "Maaf, tidak ada respon 😅";
+
+    await ctx.reply(reply);
+
   } catch (error) {
     console.error("ERROR:", error);
     await ctx.reply("Error: " + error.message);
   }
 });
-
 bot.launch();
 console.log("Bot PRO jalan 🚀");
