@@ -2,6 +2,7 @@ require("dotenv").config();
 
 const { Telegraf } = require("telegraf");
 const OpenAI = require("openai");
+const { getStockData } = require("./saham");
 // const mongoose = require("mongoose");
 // const User = require("./user");
 
@@ -19,6 +20,49 @@ const openai = new OpenAI({
 });
 
 bot.on("text", async (ctx) => {
+  try {
+    const symbol = ctx.message.text.toUpperCase();
+
+    const data = await getStockData(symbol);
+
+    if (!data) {
+      return ctx.reply("❌ Saham tidak ditemukan");
+    }
+
+    const { price, high, low } = data;
+
+    const response = await openai.responses.create({
+      model: "gpt-4o-mini",
+      input: `
+Analisa saham ${symbol}:
+
+Harga: ${price}
+High: ${high}
+Low: ${low}
+
+Berikan:
+- Trend
+- Support resistance
+- Saran entry
+- Risiko
+`
+    });
+
+    await ctx.reply(`
+📊 ${symbol}
+
+Harga: ${price}
+High: ${high}
+Low: ${low}
+
+${response.output_text}
+`);
+
+  } catch (error) {
+    console.error(error);
+    await ctx.reply("❌ Error bot");
+  }
+});
   try {
     const userMessage = ctx.message.text;
 

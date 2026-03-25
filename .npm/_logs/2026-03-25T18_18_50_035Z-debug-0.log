@@ -1,0 +1,334 @@
+0 verbose cli /home/screaminginc/.nvm/versions/node/v22.22.1/bin/node /home/screaminginc/.nvm/versions/node/v22.22.1/bin/npm
+1 info using npm@10.9.4
+2 info using node@v22.22.1
+3 silly config load:file:/home/screaminginc/.nvm/versions/node/v22.22.1/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/screaminginc/.npmrc
+5 silly config load:file:/home/screaminginc/.nvm/versions/node/v22.22.1/etc/npmrc
+6 verbose title npm install yahoo-finance2
+7 verbose argv "install" "yahoo-finance2"
+8 verbose logfile logs-max:10 dir:/home/screaminginc/.npm/_logs/2026-03-25T18_18_50_035Z-
+9 verbose logfile /home/screaminginc/.npm/_logs/2026-03-25T18_18_50_035Z-debug-0.log
+10 silly logfile start cleaning logs, removing 1 files
+11 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest yahoo-finance2@*
+15 silly packumentCache full:https://registry.npmjs.org/yahoo-finance2 cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/yahoo-finance2 1951ms (cache miss)
+17 silly packumentCache full:https://registry.npmjs.org/yahoo-finance2 set size:undefined disposed:false
+18 silly placeDep ROOT yahoo-finance2@3.13.2 OK for: screaminginc@1.0.0 want: *
+19 silly fetch manifest json-schema@^0.4.0
+20 silly packumentCache full:https://registry.npmjs.org/json-schema cache-miss
+21 silly fetch manifest tough-cookie@npm:tough-cookie@^5.1.1
+22 silly packumentCache full:https://registry.npmjs.org/tough-cookie cache-miss
+23 silly fetch manifest tough-cookie-file-store@npm:tough-cookie-file-store@^2.0.3
+24 silly packumentCache full:https://registry.npmjs.org/tough-cookie-file-store cache-miss
+25 silly fetch manifest @deno/shim-deno@~0.18.0
+26 silly packumentCache full:https://registry.npmjs.org/@deno%2fshim-deno cache-miss
+27 silly fetch manifest fetch-mock-cache@npm:fetch-mock-cache@^2.1.3
+28 silly packumentCache full:https://registry.npmjs.org/fetch-mock-cache cache-miss
+29 http fetch GET 200 https://registry.npmjs.org/json-schema 88ms (cache miss)
+30 silly packumentCache full:https://registry.npmjs.org/json-schema set size:undefined disposed:false
+31 http fetch GET 200 https://registry.npmjs.org/tough-cookie 333ms (cache miss)
+32 silly packumentCache full:https://registry.npmjs.org/tough-cookie set size:undefined disposed:false
+33 http fetch GET 200 https://registry.npmjs.org/tough-cookie-file-store 549ms (cache miss)
+34 silly packumentCache full:https://registry.npmjs.org/tough-cookie-file-store set size:undefined disposed:false
+35 http fetch GET 200 https://registry.npmjs.org/fetch-mock-cache 556ms (cache miss)
+36 silly packumentCache full:https://registry.npmjs.org/fetch-mock-cache set size:undefined disposed:false
+37 http fetch GET 200 https://registry.npmjs.org/@deno%2fshim-deno 699ms (cache miss)
+38 silly packumentCache full:https://registry.npmjs.org/@deno%2fshim-deno set size:undefined disposed:false
+39 silly placeDep ROOT @deno/shim-deno@0.18.2 OK for: yahoo-finance2@3.13.2 want: ~0.18.0
+40 silly placeDep ROOT fetch-mock-cache@2.3.1 OK for: yahoo-finance2@3.13.2 want: npm:fetch-mock-cache@^2.1.3
+41 silly placeDep ROOT json-schema@0.4.0 OK for: yahoo-finance2@3.13.2 want: ^0.4.0
+42 silly placeDep ROOT tough-cookie@5.1.2 OK for: yahoo-finance2@3.13.2 want: npm:tough-cookie@^5.1.1
+43 silly placeDep ROOT tough-cookie-file-store@2.0.3 OK for: yahoo-finance2@3.13.2 want: npm:tough-cookie-file-store@^2.0.3
+44 silly fetch manifest which@^4.0.0
+45 silly packumentCache full:https://registry.npmjs.org/which cache-miss
+46 silly fetch manifest @deno/shim-deno-test@^0.5.0
+47 silly packumentCache full:https://registry.npmjs.org/@deno%2fshim-deno-test cache-miss
+48 silly fetch manifest filenamify-url@2.1.2
+49 silly packumentCache full:https://registry.npmjs.org/filenamify-url cache-miss
+50 silly fetch manifest tldts@^6.1.32
+51 silly packumentCache full:https://registry.npmjs.org/tldts cache-miss
+52 silly fetch manifest tough-cookie@^4.0.0
+53 silly packumentCache full:https://registry.npmjs.org/tough-cookie cache-miss
+54 http cache https://registry.npmjs.org/tough-cookie 10ms (cache hit)
+55 silly packumentCache full:https://registry.npmjs.org/tough-cookie set size:149007 disposed:false
+56 http fetch GET 200 https://registry.npmjs.org/which 64ms (cache revalidated)
+57 silly packumentCache full:https://registry.npmjs.org/which set size:67747 disposed:false
+58 http fetch GET 200 https://registry.npmjs.org/filenamify-url 68ms (cache miss)
+59 silly packumentCache full:https://registry.npmjs.org/filenamify-url set size:undefined disposed:false
+60 http fetch GET 200 https://registry.npmjs.org/tldts 224ms (cache miss)
+61 silly packumentCache full:https://registry.npmjs.org/tldts set size:undefined disposed:false
+62 http fetch GET 200 https://registry.npmjs.org/@deno%2fshim-deno-test 868ms (cache miss)
+63 silly packumentCache full:https://registry.npmjs.org/@deno%2fshim-deno-test set size:undefined disposed:false
+64 silly placeDep ROOT @deno/shim-deno-test@0.5.0 OK for: @deno/shim-deno@0.18.2 want: ^0.5.0
+65 silly placeDep ROOT which@4.0.0 OK for: @deno/shim-deno@0.18.2 want: ^4.0.0
+66 silly fetch manifest isexe@^3.1.1
+67 silly packumentCache full:https://registry.npmjs.org/isexe cache-miss
+68 http fetch GET 200 https://registry.npmjs.org/isexe 58ms (cache revalidated)
+69 silly packumentCache full:https://registry.npmjs.org/isexe set size:31756 disposed:false
+70 silly placeDep ROOT filenamify-url@2.1.2 OK for: fetch-mock-cache@2.3.1 want: 2.1.2
+71 silly fetch manifest filenamify@^4.3.0
+72 silly packumentCache full:https://registry.npmjs.org/filenamify cache-miss
+73 silly fetch manifest humanize-url@^2.1.1
+74 silly packumentCache full:https://registry.npmjs.org/humanize-url cache-miss
+75 http fetch GET 200 https://registry.npmjs.org/humanize-url 55ms (cache miss)
+76 silly packumentCache full:https://registry.npmjs.org/humanize-url set size:undefined disposed:false
+77 http fetch GET 200 https://registry.npmjs.org/filenamify 66ms (cache miss)
+78 silly packumentCache full:https://registry.npmjs.org/filenamify set size:undefined disposed:false
+79 silly placeDep ROOT filenamify@4.3.0 OK for: filenamify-url@2.1.2 want: ^4.3.0
+80 silly placeDep ROOT humanize-url@2.1.1 OK for: filenamify-url@2.1.2 want: ^2.1.1
+81 silly fetch manifest strip-outer@^1.0.1
+82 silly packumentCache full:https://registry.npmjs.org/strip-outer cache-miss
+83 silly fetch manifest trim-repeated@^1.0.0
+84 silly packumentCache full:https://registry.npmjs.org/trim-repeated cache-miss
+85 silly fetch manifest filename-reserved-regex@^2.0.0
+86 silly packumentCache full:https://registry.npmjs.org/filename-reserved-regex cache-miss
+87 silly fetch manifest normalize-url@^4.5.1
+88 silly packumentCache full:https://registry.npmjs.org/normalize-url cache-miss
+89 http fetch GET 200 https://registry.npmjs.org/filename-reserved-regex 58ms (cache miss)
+90 silly packumentCache full:https://registry.npmjs.org/filename-reserved-regex set size:undefined disposed:false
+91 http fetch GET 200 https://registry.npmjs.org/strip-outer 60ms (cache miss)
+92 silly packumentCache full:https://registry.npmjs.org/strip-outer set size:undefined disposed:false
+93 http fetch GET 200 https://registry.npmjs.org/trim-repeated 60ms (cache miss)
+94 silly packumentCache full:https://registry.npmjs.org/trim-repeated set size:undefined disposed:false
+95 http fetch GET 200 https://registry.npmjs.org/normalize-url 105ms (cache miss)
+96 silly packumentCache full:https://registry.npmjs.org/normalize-url set size:undefined disposed:false
+97 silly placeDep ROOT filename-reserved-regex@2.0.0 OK for: filenamify@4.3.0 want: ^2.0.0
+98 silly placeDep ROOT strip-outer@1.0.1 OK for: filenamify@4.3.0 want: ^1.0.1
+99 silly placeDep ROOT trim-repeated@1.0.0 OK for: filenamify@4.3.0 want: ^1.0.0
+100 silly fetch manifest escape-string-regexp@^1.0.2
+101 silly packumentCache full:https://registry.npmjs.org/escape-string-regexp cache-miss
+102 silly fetch manifest escape-string-regexp@^1.0.2
+103 silly packumentCache full:https://registry.npmjs.org/escape-string-regexp cache-miss
+104 http fetch GET 200 https://registry.npmjs.org/escape-string-regexp 58ms (cache miss)
+105 silly packumentCache full:https://registry.npmjs.org/escape-string-regexp set size:undefined disposed:false
+106 http fetch GET 200 https://registry.npmjs.org/escape-string-regexp 59ms (cache miss)
+107 silly packumentCache full:https://registry.npmjs.org/escape-string-regexp set size:undefined disposed:false
+108 silly placeDep ROOT normalize-url@4.5.1 OK for: humanize-url@2.1.1 want: ^4.5.1
+109 silly placeDep ROOT escape-string-regexp@1.0.5 OK for: strip-outer@1.0.1 want: ^1.0.2
+110 silly placeDep ROOT tldts@6.1.86 OK for: tough-cookie@5.1.2 want: ^6.1.32
+111 silly fetch manifest tldts-core@^6.1.86
+112 silly packumentCache full:https://registry.npmjs.org/tldts-core cache-miss
+113 http fetch GET 200 https://registry.npmjs.org/tldts-core 125ms (cache miss)
+114 silly packumentCache full:https://registry.npmjs.org/tldts-core set size:undefined disposed:false
+115 silly placeDep ROOT tldts-core@6.1.86 OK for: tldts@6.1.86 want: ^6.1.86
+116 silly placeDep node_modules/tough-cookie-file-store tough-cookie@4.1.4 OK for: tough-cookie-file-store@2.0.3 want: ^4.0.0
+117 silly fetch manifest psl@^1.1.33
+118 silly packumentCache full:https://registry.npmjs.org/psl cache-miss
+119 silly fetch manifest url-parse@^1.5.3
+120 silly packumentCache full:https://registry.npmjs.org/url-parse cache-miss
+121 silly fetch manifest universalify@^0.2.0
+122 silly packumentCache full:https://registry.npmjs.org/universalify cache-miss
+123 http fetch GET 200 https://registry.npmjs.org/universalify 59ms (cache miss)
+124 silly packumentCache full:https://registry.npmjs.org/universalify set size:undefined disposed:false
+125 http fetch GET 200 https://registry.npmjs.org/psl 65ms (cache miss)
+126 silly packumentCache full:https://registry.npmjs.org/psl set size:undefined disposed:false
+127 http fetch GET 200 https://registry.npmjs.org/url-parse 66ms (cache miss)
+128 silly packumentCache full:https://registry.npmjs.org/url-parse set size:undefined disposed:false
+129 silly placeDep ROOT isexe@3.1.5 OK for: which@4.0.0 want: ^3.1.1
+130 silly placeDep ROOT psl@1.15.0 OK for: tough-cookie@4.1.4 want: ^1.1.33
+131 silly placeDep ROOT universalify@0.2.0 OK for: tough-cookie@4.1.4 want: ^0.2.0
+132 silly placeDep ROOT url-parse@1.5.10 OK for: tough-cookie@4.1.4 want: ^1.5.3
+133 silly fetch manifest querystringify@^2.1.1
+134 silly packumentCache full:https://registry.npmjs.org/querystringify cache-miss
+135 silly fetch manifest requires-port@^1.0.0
+136 silly packumentCache full:https://registry.npmjs.org/requires-port cache-miss
+137 http fetch GET 200 https://registry.npmjs.org/requires-port 62ms (cache miss)
+138 silly packumentCache full:https://registry.npmjs.org/requires-port set size:undefined disposed:false
+139 http fetch GET 200 https://registry.npmjs.org/querystringify 64ms (cache miss)
+140 silly packumentCache full:https://registry.npmjs.org/querystringify set size:undefined disposed:false
+141 silly placeDep ROOT querystringify@2.2.0 OK for: url-parse@1.5.10 want: ^2.1.1
+142 silly placeDep ROOT requires-port@1.0.0 OK for: url-parse@1.5.10 want: ^1.0.0
+143 silly reify moves {}
+144 silly audit bulk request {
+144 silly audit   '@mongodb-js/saslprep': [ '1.4.6' ],
+144 silly audit   '@telegraf/types': [ '7.1.0' ],
+144 silly audit   '@types/webidl-conversions': [ '7.0.3' ],
+144 silly audit   '@types/whatwg-url': [ '13.0.0' ],
+144 silly audit   'abort-controller': [ '3.0.0' ],
+144 silly audit   asynckit: [ '0.4.0' ],
+144 silly audit   axios: [ '1.13.6' ],
+144 silly audit   bson: [ '7.2.0' ],
+144 silly audit   'buffer-alloc': [ '1.2.0' ],
+144 silly audit   'buffer-alloc-unsafe': [ '1.1.0' ],
+144 silly audit   'buffer-fill': [ '1.0.0' ],
+144 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+144 silly audit   'combined-stream': [ '1.0.8' ],
+144 silly audit   debug: [ '4.4.3' ],
+144 silly audit   'delayed-stream': [ '1.0.0' ],
+144 silly audit   dotenv: [ '17.3.1' ],
+144 silly audit   'dunder-proto': [ '1.0.1' ],
+144 silly audit   'es-define-property': [ '1.0.1' ],
+144 silly audit   'es-errors': [ '1.3.0' ],
+144 silly audit   'es-object-atoms': [ '1.1.1' ],
+144 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+144 silly audit   'event-target-shim': [ '5.0.1' ],
+144 silly audit   'follow-redirects': [ '1.15.11' ],
+144 silly audit   'form-data': [ '4.0.5' ],
+144 silly audit   'function-bind': [ '1.1.2' ],
+144 silly audit   'get-intrinsic': [ '1.3.0' ],
+144 silly audit   'get-proto': [ '1.0.1' ],
+144 silly audit   gopd: [ '1.2.0' ],
+144 silly audit   'has-symbols': [ '1.1.0' ],
+144 silly audit   'has-tostringtag': [ '1.0.2' ],
+144 silly audit   hasown: [ '2.0.2' ],
+144 silly audit   kareem: [ '3.2.0' ],
+144 silly audit   'math-intrinsics': [ '1.1.0' ],
+144 silly audit   'memory-pager': [ '1.5.0' ],
+144 silly audit   'mime-db': [ '1.52.0' ],
+144 silly audit   'mime-types': [ '2.1.35' ],
+144 silly audit   mongodb: [ '7.1.1' ],
+144 silly audit   'mongodb-connection-string-url': [ '7.0.1' ],
+144 silly audit   tr46: [ '5.1.1', '0.0.3' ],
+144 silly audit   'webidl-conversions': [ '7.0.0', '3.0.1' ],
+144 silly audit   'whatwg-url': [ '14.2.0', '5.0.0' ],
+144 silly audit   mongoose: [ '9.3.2' ],
+144 silly audit   mpath: [ '0.9.0' ],
+144 silly audit   mquery: [ '6.0.0' ],
+144 silly audit   mri: [ '1.2.0' ],
+144 silly audit   ms: [ '2.1.3' ],
+144 silly audit   'node-fetch': [ '2.7.0' ],
+144 silly audit   openai: [ '6.32.0' ],
+144 silly audit   'p-timeout': [ '4.1.0' ],
+144 silly audit   'proxy-from-env': [ '1.1.0' ],
+144 silly audit   punycode: [ '2.3.1' ],
+144 silly audit   'safe-compare': [ '1.1.4' ],
+144 silly audit   'sandwich-stream': [ '2.0.2' ],
+144 silly audit   sift: [ '17.1.3' ],
+144 silly audit   'sparse-bitfield': [ '3.0.3' ],
+144 silly audit   telegraf: [ '4.16.3' ],
+144 silly audit   'yahoo-finance2': [ '3.13.2' ],
+144 silly audit   '@deno/shim-deno': [ '0.18.2' ],
+144 silly audit   'fetch-mock-cache': [ '2.3.1' ],
+144 silly audit   'json-schema': [ '0.4.0' ],
+144 silly audit   'tough-cookie': [ '5.1.2', '4.1.4' ],
+144 silly audit   'tough-cookie-file-store': [ '2.0.3' ],
+144 silly audit   '@deno/shim-deno-test': [ '0.5.0' ],
+144 silly audit   which: [ '4.0.0' ],
+144 silly audit   'filenamify-url': [ '2.1.2' ],
+144 silly audit   filenamify: [ '4.3.0' ],
+144 silly audit   'humanize-url': [ '2.1.1' ],
+144 silly audit   'filename-reserved-regex': [ '2.0.0' ],
+144 silly audit   'strip-outer': [ '1.0.1' ],
+144 silly audit   'trim-repeated': [ '1.0.0' ],
+144 silly audit   'normalize-url': [ '4.5.1' ],
+144 silly audit   'escape-string-regexp': [ '1.0.5' ],
+144 silly audit   tldts: [ '6.1.86' ],
+144 silly audit   'tldts-core': [ '6.1.86' ],
+144 silly audit   isexe: [ '3.1.5' ],
+144 silly audit   psl: [ '1.15.0' ],
+144 silly audit   universalify: [ '0.2.0' ],
+144 silly audit   'url-parse': [ '1.5.10' ],
+144 silly audit   querystringify: [ '2.2.0' ],
+144 silly audit   'requires-port': [ '1.0.0' ]
+144 silly audit }
+145 http cache requires-port@https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz 0ms (cache hit)
+146 http cache querystringify@https://registry.npmjs.org/querystringify/-/querystringify-2.2.0.tgz 0ms (cache hit)
+147 http cache url-parse@https://registry.npmjs.org/url-parse/-/url-parse-1.5.10.tgz 0ms (cache hit)
+148 http cache universalify@https://registry.npmjs.org/universalify/-/universalify-0.2.0.tgz 0ms (cache hit)
+149 http cache psl@https://registry.npmjs.org/psl/-/psl-1.15.0.tgz 0ms (cache hit)
+150 http cache tldts-core@https://registry.npmjs.org/tldts-core/-/tldts-core-6.1.86.tgz 0ms (cache hit)
+151 http cache tldts@https://registry.npmjs.org/tldts/-/tldts-6.1.86.tgz 0ms (cache hit)
+152 http cache escape-string-regexp@https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz 0ms (cache hit)
+153 http cache normalize-url@https://registry.npmjs.org/normalize-url/-/normalize-url-4.5.1.tgz 0ms (cache hit)
+154 http cache strip-outer@https://registry.npmjs.org/strip-outer/-/strip-outer-1.0.1.tgz 0ms (cache hit)
+155 http cache isexe@https://registry.npmjs.org/isexe/-/isexe-3.1.5.tgz 0ms (cache hit)
+156 http cache trim-repeated@https://registry.npmjs.org/trim-repeated/-/trim-repeated-1.0.0.tgz 0ms (cache hit)
+157 http cache filenamify-url@https://registry.npmjs.org/filenamify-url/-/filenamify-url-2.1.2.tgz 1ms (cache hit)
+158 http cache filename-reserved-regex@https://registry.npmjs.org/filename-reserved-regex/-/filename-reserved-regex-2.0.0.tgz 0ms (cache hit)
+159 http cache filenamify@https://registry.npmjs.org/filenamify/-/filenamify-4.3.0.tgz 0ms (cache hit)
+160 http cache @deno/shim-deno-test@https://registry.npmjs.org/@deno/shim-deno-test/-/shim-deno-test-0.5.0.tgz 0ms (cache hit)
+161 http cache which@https://registry.npmjs.org/which/-/which-4.0.0.tgz 0ms (cache hit)
+162 http cache tough-cookie-file-store@https://registry.npmjs.org/tough-cookie-file-store/-/tough-cookie-file-store-2.0.3.tgz 0ms (cache hit)
+163 http cache json-schema@https://registry.npmjs.org/json-schema/-/json-schema-0.4.0.tgz 0ms (cache hit)
+164 http cache tough-cookie@https://registry.npmjs.org/tough-cookie/-/tough-cookie-5.1.2.tgz 0ms (cache hit)
+165 http cache humanize-url@https://registry.npmjs.org/humanize-url/-/humanize-url-2.1.1.tgz 0ms (cache hit)
+166 http cache fetch-mock-cache@https://registry.npmjs.org/fetch-mock-cache/-/fetch-mock-cache-2.3.1.tgz 0ms (cache hit)
+167 http cache tough-cookie@https://registry.npmjs.org/tough-cookie/-/tough-cookie-4.1.4.tgz 0ms (cache hit)
+168 http cache @deno/shim-deno@https://registry.npmjs.org/@deno/shim-deno/-/shim-deno-0.18.2.tgz 0ms (cache hit)
+169 http cache yahoo-finance2@https://registry.npmjs.org/yahoo-finance2/-/yahoo-finance2-3.13.2.tgz 0ms (cache hit)
+170 silly tarball no local data for querystringify@https://registry.npmjs.org/querystringify/-/querystringify-2.2.0.tgz. Extracting by manifest.
+171 silly tarball no local data for requires-port@https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz. Extracting by manifest.
+172 silly tarball no local data for url-parse@https://registry.npmjs.org/url-parse/-/url-parse-1.5.10.tgz. Extracting by manifest.
+173 silly tarball no local data for universalify@https://registry.npmjs.org/universalify/-/universalify-0.2.0.tgz. Extracting by manifest.
+174 silly tarball no local data for tldts-core@https://registry.npmjs.org/tldts-core/-/tldts-core-6.1.86.tgz. Extracting by manifest.
+175 silly tarball no local data for psl@https://registry.npmjs.org/psl/-/psl-1.15.0.tgz. Extracting by manifest.
+176 silly tarball no local data for tldts@https://registry.npmjs.org/tldts/-/tldts-6.1.86.tgz. Extracting by manifest.
+177 silly tarball no local data for escape-string-regexp@https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz. Extracting by manifest.
+178 silly tarball no local data for normalize-url@https://registry.npmjs.org/normalize-url/-/normalize-url-4.5.1.tgz. Extracting by manifest.
+179 silly tarball no local data for strip-outer@https://registry.npmjs.org/strip-outer/-/strip-outer-1.0.1.tgz. Extracting by manifest.
+180 silly tarball no local data for isexe@https://registry.npmjs.org/isexe/-/isexe-3.1.5.tgz. Extracting by manifest.
+181 silly tarball no local data for trim-repeated@https://registry.npmjs.org/trim-repeated/-/trim-repeated-1.0.0.tgz. Extracting by manifest.
+182 silly tarball no local data for filenamify-url@https://registry.npmjs.org/filenamify-url/-/filenamify-url-2.1.2.tgz. Extracting by manifest.
+183 silly tarball no local data for filenamify@https://registry.npmjs.org/filenamify/-/filenamify-4.3.0.tgz. Extracting by manifest.
+184 silly tarball no local data for filename-reserved-regex@https://registry.npmjs.org/filename-reserved-regex/-/filename-reserved-regex-2.0.0.tgz. Extracting by manifest.
+185 silly tarball no local data for @deno/shim-deno-test@https://registry.npmjs.org/@deno/shim-deno-test/-/shim-deno-test-0.5.0.tgz. Extracting by manifest.
+186 silly tarball no local data for which@https://registry.npmjs.org/which/-/which-4.0.0.tgz. Extracting by manifest.
+187 silly tarball no local data for json-schema@https://registry.npmjs.org/json-schema/-/json-schema-0.4.0.tgz. Extracting by manifest.
+188 silly tarball no local data for tough-cookie-file-store@https://registry.npmjs.org/tough-cookie-file-store/-/tough-cookie-file-store-2.0.3.tgz. Extracting by manifest.
+189 silly tarball no local data for humanize-url@https://registry.npmjs.org/humanize-url/-/humanize-url-2.1.1.tgz. Extracting by manifest.
+190 silly tarball no local data for tough-cookie@https://registry.npmjs.org/tough-cookie/-/tough-cookie-5.1.2.tgz. Extracting by manifest.
+191 silly tarball no local data for fetch-mock-cache@https://registry.npmjs.org/fetch-mock-cache/-/fetch-mock-cache-2.3.1.tgz. Extracting by manifest.
+192 silly tarball no local data for tough-cookie@https://registry.npmjs.org/tough-cookie/-/tough-cookie-4.1.4.tgz. Extracting by manifest.
+193 silly tarball no local data for @deno/shim-deno@https://registry.npmjs.org/@deno/shim-deno/-/shim-deno-0.18.2.tgz. Extracting by manifest.
+194 silly tarball no local data for yahoo-finance2@https://registry.npmjs.org/yahoo-finance2/-/yahoo-finance2-3.13.2.tgz. Extracting by manifest.
+195 http fetch GET 200 https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz 87ms (cache miss)
+196 http fetch GET 200 https://registry.npmjs.org/querystringify/-/querystringify-2.2.0.tgz 88ms (cache miss)
+197 http fetch GET 200 https://registry.npmjs.org/url-parse/-/url-parse-1.5.10.tgz 87ms (cache miss)
+198 http fetch GET 200 https://registry.npmjs.org/universalify/-/universalify-0.2.0.tgz 88ms (cache miss)
+199 http fetch GET 200 https://registry.npmjs.org/filename-reserved-regex/-/filename-reserved-regex-2.0.0.tgz 109ms (cache miss)
+200 http fetch GET 200 https://registry.npmjs.org/which/-/which-4.0.0.tgz 118ms (cache miss)
+201 http fetch GET 200 https://registry.npmjs.org/json-schema/-/json-schema-0.4.0.tgz 123ms (cache miss)
+202 http fetch GET 200 https://registry.npmjs.org/@deno/shim-deno-test/-/shim-deno-test-0.5.0.tgz 139ms (cache miss)
+203 http fetch GET 200 https://registry.npmjs.org/humanize-url/-/humanize-url-2.1.1.tgz 179ms (cache miss)
+204 http fetch GET 200 https://registry.npmjs.org/trim-repeated/-/trim-repeated-1.0.0.tgz 194ms (cache miss)
+205 http fetch GET 200 https://registry.npmjs.org/filenamify-url/-/filenamify-url-2.1.2.tgz 194ms (cache miss)
+206 http fetch GET 200 https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz 206ms (cache miss)
+207 http fetch GET 200 https://registry.npmjs.org/normalize-url/-/normalize-url-4.5.1.tgz 207ms (cache miss)
+208 http fetch GET 200 https://registry.npmjs.org/filenamify/-/filenamify-4.3.0.tgz 206ms (cache miss)
+209 http fetch GET 200 https://registry.npmjs.org/tough-cookie-file-store/-/tough-cookie-file-store-2.0.3.tgz 209ms (cache miss)
+210 http fetch GET 200 https://registry.npmjs.org/strip-outer/-/strip-outer-1.0.1.tgz 223ms (cache miss)
+211 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 239ms
+212 silly audit report {}
+213 http fetch GET 200 https://registry.npmjs.org/tough-cookie/-/tough-cookie-4.1.4.tgz 241ms (cache miss)
+214 http fetch GET 200 https://registry.npmjs.org/isexe/-/isexe-3.1.5.tgz 269ms (cache miss)
+215 http fetch GET 200 https://registry.npmjs.org/tough-cookie/-/tough-cookie-5.1.2.tgz 289ms (cache miss)
+216 http fetch GET 200 https://registry.npmjs.org/fetch-mock-cache/-/fetch-mock-cache-2.3.1.tgz 300ms (cache miss)
+217 http fetch GET 200 https://registry.npmjs.org/psl/-/psl-1.15.0.tgz 311ms (cache miss)
+218 http fetch GET 200 https://registry.npmjs.org/tldts-core/-/tldts-core-6.1.86.tgz 339ms (cache miss)
+219 http fetch GET 200 https://registry.npmjs.org/@deno/shim-deno/-/shim-deno-0.18.2.tgz 377ms (cache miss)
+220 http fetch GET 200 https://registry.npmjs.org/tldts/-/tldts-6.1.86.tgz 396ms (cache miss)
+221 http fetch GET 200 https://registry.npmjs.org/yahoo-finance2/-/yahoo-finance2-3.13.2.tgz 624ms (cache miss)
+222 silly ADD node_modules/requires-port
+223 silly ADD node_modules/querystringify
+224 silly ADD node_modules/url-parse
+225 silly ADD node_modules/universalify
+226 silly ADD node_modules/psl
+227 silly ADD node_modules/isexe
+228 silly ADD node_modules/tldts-core
+229 silly ADD node_modules/tldts
+230 silly ADD node_modules/escape-string-regexp
+231 silly ADD node_modules/normalize-url
+232 silly ADD node_modules/trim-repeated
+233 silly ADD node_modules/strip-outer
+234 silly ADD node_modules/filename-reserved-regex
+235 silly ADD node_modules/humanize-url
+236 silly ADD node_modules/filenamify
+237 silly ADD node_modules/filenamify-url
+238 silly ADD node_modules/which
+239 silly ADD node_modules/@deno/shim-deno-test
+240 silly ADD node_modules/tough-cookie-file-store
+241 silly ADD node_modules/tough-cookie-file-store/node_modules/tough-cookie
+242 silly ADD node_modules/tough-cookie
+243 silly ADD node_modules/json-schema
+244 silly ADD node_modules/fetch-mock-cache
+245 silly ADD node_modules/@deno/shim-deno
+246 silly ADD node_modules/yahoo-finance2
+247 verbose cwd /home/screaminginc
+248 verbose os Linux 6.6.87.2-microsoft-standard-WSL2
+249 verbose node v22.22.1
+250 verbose npm  v10.9.4
+251 verbose exit 0
+252 info ok
