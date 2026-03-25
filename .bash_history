@@ -508,3 +508,128 @@ npm init -y
 npm install telegraf openai mongoose dotenv
 nano package.json
 node bot.js
+password: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
+git push -u origin main
+git branch -m main
+git push -u origin main
+git add .
+git rm -r --cached .openclaw
+cd ~/bot-telegram
+ls
+rm -rf .git
+git init
+git add bot.js db.js package.json user.js usermodel.js
+git commit -m "first clean commit"
+git branch -M main
+git remote add origin https://github.com/mahardiyanti-cell/palermodiaz.git
+git push -u origin main
+it config --global --unset credential.helper
+git push-u origin main
+git push -u origin main
+git add .
+git commit -m "fix bot token"
+git push
+ls
+nano bot.js
+git add .
+git commit -m "add bot launch"
+git push
+nano bot.js
+git add .
+git rm -r--cached .nvm
+git rm -r --cached openclaw
+git rm -r --cached .nmv
+git rm -r --cached .nvm
+rm -rf .openclaw
+nano .gitignore
+git reset
+git add.
+git add .
+git commit -m "clean repo"
+git push
+git push --set-upstream origin main
+npm install mongoose
+pkill node
+node bot.js
+nano botjs
+nano bot.js
+pkill node
+node bot.js
+nano bot.js
+pkil node
+node bot.js
+pkill node
+node bot.js
+nano bot.js
+pkill node
+node bot.js
+nano bot.js
+pkill node
+node bot.js
+nano bot.js
+pkill node
+node bot.js
+nano bot.js
+pkill node
+node bot.js
+nano bot.js
+pkill node
+node bot.js
+nano bot.js
+pkill node
+node bot.js
+nano bot.js
+pkill node
+node bot.js
+nano .env
+pkill node
+node bot.js
+npm install mongoose
+nano usermodel.js
+pkill node
+node bot.js
+git init
+git add .
+git commit -m "ready deploy"
+git remote add origin https://github.com/USERNAME/REPO.git
+git branch -M main
+git push -u origin main
+git remote add origin https://github.com/mahardiyanti-cell/palermodiaz.git
+git branch -M main
+git push -u origin main
+git remote remove origin
+git remote add origin https://github.com/mahardiyanti-cell/palermodiaz.git
+git branch -M main
+git push -u origin main
+git config --global user.name
+git config --global user.email
+git config --global user.email "mahardiyanti@icloud.com"
+git config --global user.name "palermodiaz"
+git add .
+git commit -m "first commit"
+ls
+mkdir bot-telegram
+cd bot-telegram
+cp ../bot.js .
+cp ../db.js .
+cp ../user.js .
+cp ../usermodel.js .
+cp ../package.json .
+nano gitignore
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/mahardiyanti-cell/palermodiaz.git
+GitHub
+mahardiyanti-cell/palermodiaz
+Contribute to mahardiyanti-cell/palermodiaz development by creating an account on GitHub.
+git remote remove origin
+git remote add origin https://github.com/mahardiyanti-cell/palermodiaz.git
+git remote -v
+git branch -M main
+git push -u origin main
+git pull origin main --allow-unrelated-histories --no-rebase
+git push origin main
+git push --set-upstream origin main
+git pull origin main --allow-unrelated-histories
+git push origin main

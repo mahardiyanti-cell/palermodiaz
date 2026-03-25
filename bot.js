@@ -18,25 +18,16 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-const chats = {};
-
-bot.start((ctx) => {
-  ctx.reply("Halo! Saya AI bot PRO 🤖🔥");
-});
-
 bot.on("text", async (ctx) => {
   try {
     const userMessage = ctx.message.text;
 
-    const response = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [
-        { role: "system", content: "Kamu adalah AI assistant yang ramah." },
-        { role: "user", content: userMessage }
-      ],
+    const response = await openai.responses.create({
+      model: "gpt-4.1-mini",
+      input: userMessage,
     });
 
-    const reply = response.choices[0].message.content;
+    const reply = response.output_text || "Maaf, tidak ada respon 😅";
 
     await ctx.reply(reply);
 
