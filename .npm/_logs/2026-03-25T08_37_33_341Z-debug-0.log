@@ -1,0 +1,38 @@
+0 verbose cli /home/screaminginc/.nvm/versions/node/v22.22.1/bin/node /home/screaminginc/.nvm/versions/node/v22.22.1/bin/npm
+1 info using npm@10.9.4
+2 info using node@v22.22.1
+3 silly config load:file:/home/screaminginc/.nvm/versions/node/v22.22.1/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/screaminginc/.npmrc
+5 silly config load:file:/home/screaminginc/.nvm/versions/node/v22.22.1/etc/npmrc
+6 verbose title npm init
+7 verbose argv "init" "--yes"
+8 verbose logfile logs-max:10 dir:/home/screaminginc/.npm/_logs/2026-03-25T08_37_33_341Z-
+9 verbose logfile /home/screaminginc/.npm/_logs/2026-03-25T08_37_33_341Z-debug-0.log
+10 silly logfile start cleaning logs, removing 1 files
+11 silly logfile done cleaning log files
+12 silly package data {
+12 silly package data   dependencies: {
+12 silly package data     axios: '^1.13.6',
+12 silly package data     dotenv: '^17.3.1',
+12 silly package data     mongoose: '^9.3.2',
+12 silly package data     openai: '^6.32.0',
+12 silly package data     telegraf: '^4.16.3'
+12 silly package data   },
+12 silly package data   name: 'screaminginc',
+12 silly package data   version: '1.0.0',
+12 silly package data   description: '',
+12 silly package data   main: 'bot.js',
+12 silly package data   devDependencies: {},
+12 silly package data   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+12 silly package data   keywords: [],
+12 silly package data   author: '',
+12 silly package data   license: 'ISC',
+12 silly package data   [Symbol(newline)]: '\n',
+12 silly package data   [Symbol(indent)]: '  '
+12 silly package data }
+13 verbose cwd /home/screaminginc
+14 verbose os Linux 6.6.87.2-microsoft-standard-WSL2
+15 verbose node v22.22.1
+16 verbose npm  v10.9.4
+17 verbose exit 0
+18 info ok

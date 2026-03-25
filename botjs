@@ -1,0 +1,85 @@
+require('dotenv').config();
+
+const { Telegraf } = require('telegraf');
+const OpenAI = require('openai');
+
+// init bot
+const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN, {
+  telegram: { timeout: 30000 }
+});
+
+// init openai
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY
+});
+
+// memory sederhana
+const users = {};
+
+// start command
+bot.start((ctx) => {
+  ctx.reply("Halo! Saya AI bot siap bantu 😎");
+});
+
+// menu command
+bot.command('menu', (ctx) => {
+  ctx.reply("Menu:\n/start\n/menu\n/reset");
+});
+
+// reset memory
+bot.command('reset', (ctx) => {
+  const id = ctx.from.id;
+  delete users[id];
+  ctx.reply("Memory dihapus 🧹");
+});
+
+// handler utama
+bot.on('text', async (ctx) => {
+  const id = ctx.from.id;
+  const text = ctx.message.text;
+
+  if (!users[id]) users[id] = {};
+
+  // simpan nama
+  if (text.toLowerCase().includes("nama saya")) {
+    users[id].name = text.split("nama saya")[1]?.trim();
+    return ctx.reply("Oke saya ingat 😎");
+  }
+
+  const name = users[id].name || "teman";
+
+  try {
+    // delay biar natural & anti spam
+    await new Promise(r => setTimeout(r, 500));
+
+    const res = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [
+        {
+          role: "system",
+          content: Kamu asisten santai dan ramah. Panggil user dengan nama ${name}
+        },
+        {
+          role: "user",
+          content: text
+        }
+      ]
+    });
+
+    const reply = res.choices[0].message.content;
+
+    try {
+      await ctx.reply(reply);
+    } catch (err) {
+      console.log("Telegram error:", err.message);
+    }
+
+  } catch (err) {
+    console.log("AI error:", err.message);
+    await ctx.reply("Error koneksi ke AI 😅");
+  }
+});
+
+// jalanin bot
+bot.launch();
+console.log("Bot jalan 🚀");
