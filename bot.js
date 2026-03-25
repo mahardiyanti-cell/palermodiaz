@@ -64,21 +64,55 @@ ${response.output_text}
   }
 });
   try {
-    const userMessage = ctx.message.text;
+    bot.on("text", async (ctx) => {
+  try {
+    const symbol = ctx.message.text.toUpperCase();
+
+    const data = await getStockData(symbol);
+
+    if (!data) {
+      return ctx.reply("❌ Saham tidak ditemukan");
+    }
+
+    const { price, high, low } = data;
 
     const response = await openai.responses.create({
       model: "gpt-4o-mini",
-      input: userMessage,
+      input: `
+Analisa saham ${symbol}:
+
+Harga: ${price}
+High: ${high}
+Low: ${low}
+
+Berikan analisa singkat:
+- Trend
+- Support & Resistance
+- Entry point
+- Risiko
+`
     });
+
+    await ctx.reply(`
+📊 ${symbol}
+
+Harga: ${price}
+High: ${high}
+Low: ${low}
+
+${response.output_text}
+`);
+    
+  } catch (error) {
+    console.error(error);
+    await ctx.reply("❌ Error");
+  }
+});
 
     const reply = response.output_text || "Maaf, tidak ada respon 😅";
 
     await ctx.reply(reply);
 
-  } catch (error) {
-    console.error("ERROR:", error);
-    await ctx.reply("Error: " + error.message);
-  }
 });
 bot.launch();
 console.log("Bot PRO jalan 🚀");

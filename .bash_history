@@ -663,3 +663,18 @@ nano bot.js
 git add .
 git commit -m "fix model typo"
 git push origin main
+npm install yahoo-finance2
+nano saham.js
+nano bot.js
+git add .
+git commit -m "add stock analysis"
+git push
+git add .
+git commit -m "fix stock mode"
+git push
+git add .
+git commit -m "fix: disable mongodb"
+git push origin main
+git commit -m "fix: new telegram token"
+git push
+git push --set-upstream origin main
