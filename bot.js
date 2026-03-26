@@ -1,68 +1,41 @@
-import TelegramBot from "node-telegram-bot-api";
-import yahooFinance from "yahoo-finance2";
-import OpenAI from "openai";
+const TelegramBot = require('node-telegram-bot-api');
+const yahooFinance = require('yahoo-finance2').default;
 
-// ===== INIT =====
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+bot.on('message', async (msg) => {
+  const chatId = msg.chat.id;
+  const text = msg.text;
 
-// ===== GET DATA SAHAM =====
-async function getStockData(symbol) {
   try {
-    const data = await yahooFinance.quote(symbol + ".JK");
-    return data;
-  } catch (err) {
-    return null;
-  }
-}
+    if (!text) return;
 
-// ===== ANALISA SAHAM =====
-async function analyzeStock(symbol) {
-  const data = await getStockData(symbol);
+    // START COMMAND
+    if (text === '/start') {
+      return bot.sendMessage(chatId, "Kirim kode saham (contoh: BBRI)");
+    }
 
-  if (!data || !data.regularMarketPrice) {
-    return "❌ Data saham tidak ditemukan";
-  }
+    const symbol = text.toUpperCase() + ".JK";
 
-  const prompt = `
-Analisa saham ${symbol}
+    await bot.sendMessage(chatId, "📊 Sedang analisa saham...");
 
+    const data = await yahooFinance.quote(symbol);
+
+    if (!data || !data.regularMarketPrice) {
+      return bot.sendMessage(chatId, "❌ Data saham tidak ditemukan");
+    }
+
+    const response = `
+📈 ${data.symbol}
 Harga: ${data.regularMarketPrice}
 High: ${data.regularMarketDayHigh}
 Low: ${data.regularMarketDayLow}
-
-Buat analisa:
-- Trend (bullish/bearish)
-- Support & resistance
-- Rekomendasi (BUY / WAIT / SELL)
-- Target profit (%)
 `;
 
-  const res = await openai.chat.completions.create({
-    model: "gpt-4o-mini",
-    messages: [{ role: "user", content: prompt }],
-  });
+    bot.sendMessage(chatId, response);
 
-  return res.choices[0].message.content;
-}
-
-// ===== TELEGRAM HANDLER =====
-bot.onText(/\/saham (.+)/, async (msg, match) => {
-  const chatId = msg.chat.id;
-  const symbol = match[1].toUpperCase();
-
-  bot.sendMessage(chatId, "📊 Analisa saham...");
-
-  try {
-    const result = await analyzeStock(symbol);
-    bot.sendMessage(chatId, result);
   } catch (err) {
-    bot.sendMessage(chatId, "❌ Error saat analisa");
+    console.error(err);
+    bot.sendMessage(chatId, "❌ Error bro, coba lagi...");
   }
 });
-
-// ===== START =====
-console.log("🚀 Bot jalan...");
