@@ -1,7 +1,7 @@
 require('dotenv').config();
 console.log("TOKEN:", process.env.BOT_TOKEN);
 const TelegramBot = require('node-telegram-bot-api');
-const yahooFinance = require('yahoo-finance2').default;
+const axios = require('axios');
 
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
@@ -14,26 +14,31 @@ bot.on('message', async (msg) => {
   }
 
   try {
-    bot.sendMessage(chatId, '📊 Sedang analisa saham...');
+  bot.sendMessage(chatId, '📊 Sedang analisa saham...');
 
-    const data = await yahooFinance.quote(text + '.JK');
+  const symbol = text + '.JK';
 
-    if (!data || !data.regularMarketPrice) {
-      return bot.sendMessage(chatId, '❌ Data saham tidak ditemukan');
-    }
+  const response = await axios.get(
+    `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${process.env.ALPHA_API_KEY}`
+  );
 
-    const result = `
-📊 ${data.shortName} (${text}.JK)
-💰 Harga: ${data.regularMarketPrice}
-📈 High: ${data.regularMarketDayHigh}
-📉 Low: ${data.regularMarketDayLow}
+  const data = response.data["Global Quote"];
+
+  if (!data || !data["05. price"]) {
+    return bot.sendMessage(chatId, '❌ Data saham tidak ditemukan');
+  }
+
+  const result = `
+📊 ${symbol}
+💰 Harga: ${data["05. price"]}
+📈 High: ${data["03. high"]}
+📉 Low: ${data["04. low"]}
 `;
 
-    bot.sendMessage(chatId, result);
+  bot.sendMessage(chatId, result);
 
-  } catch (err) {
-    console.log(err);
-    bot.sendMessage(chatId, '❌ Error ambil data saham');
-  }
+} catch (err) {
+  console.log("ERROR:", err);
+  bot.sendMessage(chatId, '❌ Error ambil data saham');
+}
 });
-
