@@ -1,41 +1,40 @@
+require('dotenv').config();
 const TelegramBot = require('node-telegram-bot-api');
 const yahooFinance = require('yahoo-finance2').default;
 
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
 bot.on('message', async (msg) => {
-  const chatId = msg.chat.id;
-  const text = msg.text;
+    const chatId = msg.chat.id;
+    const text = msg.text.toUpperCase();
 
-  try {
-    if (!text) return;
-
-    // START COMMAND
-    if (text === '/start') {
-      return bot.sendMessage(chatId, "Kirim kode saham (contoh: BBRI)");
+    if (text === '/START') {
+        return bot.sendMessage(chatId, 'Kirim kode saham (contoh: BBRI)');
     }
 
-    const symbol = text.toUpperCase() + ".JK";
+    try {
+        bot.sendMessage(chatId, '📊 Sedang analisa saham...');
 
-    await bot.sendMessage(chatId, "📊 Sedang analisa saham...");
+        const data = await yahooFinance.quoteSummary(text + '.JK', {
+  modules: ['price']
+});
 
-    const data = await yahooFinance.quote(symbol);
+const price = data.price;
 
-    if (!data || !data.regularMarketPrice) {
-      return bot.sendMessage(chatId, "❌ Data saham tidak ditemukan");
-    }
+        if (!price || !price.regularMarketPrice) {
+            return bot.sendMessage(chatId, '❌ Data saham tidak ditemukan');
+        }
 
-    const response = `
-📈 ${data.symbol}
-Harga: ${data.regularMarketPrice}
-High: ${data.regularMarketDayHigh}
-Low: ${data.regularMarketDayLow}
+const result = `
+📊 ${price.shortName} (${text}.JK)
+💰 Harga: ${price.regularMarketPrice}
+📈 High: ${price.regularMarketDayHigh}
+📉 Low: ${price.regularMarketDayLow}
 `;
 
-    bot.sendMessage(chatId, response);
+bot.sendMessage(chatId, result);
 
-  } catch (err) {
-    console.error(err);
-    bot.sendMessage(chatId, "❌ Error bro, coba lagi...");
-  }
+    } catch (err) {
+        bot.sendMessage(chatId, '❌ Error ambil data saham');
+    }
 });

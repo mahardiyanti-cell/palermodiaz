@@ -683,3 +683,87 @@ git add .
 git commit -m "add stock analysis"
 git push
 git push --set-upstream origin main
+nano bot.js
+git add .
+git commit -m "fix structure function"
+git push
+git rm --cached .env
+.env
+nano .gitignore
+git rm --cached .env
+git reset --soft HEAD~1
+git rm --cached .env
+sudo apt install git-filter-repo
+git filter-repo --path .env --invert-paths
+git push --force
+git filter-repo --path .env --invert-paths --force
+git push --force
+git remote add origin https://github.com/mahardiyanti-cell/REPO.git
+git push -u origin main --force
+git remote remove origin
+git remote add origin https://github.com/mahardiyanti-cell/palermodiaz.git
+git push -u origin main --force
+nano .env
+.env
+node_modules
+nano .gitignore
+git add .gitignore
+git commit -m "fix gitignore"
+git push
+git rm --cached .env
+git commit -m "remove env"
+git push
+nano bot.js
+nano .env
+nano bot.js
+nano package.json
+npm install
+git add package.json
+git commit -m "add package.json"
+git push
+rm package-lock.json
+npm install
+git add.
+git commit -m "fix npm build"
+git push
+rm -rf node_modules
+rm package-lock.json
+npm install
+git add .
+git commit -m "fix clean install"
+git push
+git add.
+nano bot.js
+git add .
+git commit -m "fix bot logic"
+git push
+nano bot.js
+git add
+git add.
+git commit -m "fix bot logic"
+git push
+git ad.
+git add.
+git add .
+git commit -m "fix bot logic"
+git push
+nano package.json
+git add .
+git commit -m "remove module type"
+git push
+npm install node-telegram-bot-api@latest
+rm -rf node_modules
+rm package-lock.json
+npm install
+node bot.js
+npm install yahoo-finance2@2.9.0
+nano bot.js
+rm -rf node_modules
+rm package-lock.json
+npm install
+node bot.js
+npm install dotenv
+node bot.js
+npm install yahoo-finance2@2.9.1
+nano bot.js
+node bot.js

@@ -1,0 +1,429 @@
+0 verbose cli /home/screaminginc/.nvm/versions/node/v22.22.1/bin/node /home/screaminginc/.nvm/versions/node/v22.22.1/bin/npm
+1 info using npm@10.9.4
+2 info using node@v22.22.1
+3 silly config load:file:/home/screaminginc/.nvm/versions/node/v22.22.1/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/screaminginc/.npmrc
+5 silly config load:file:/home/screaminginc/.nvm/versions/node/v22.22.1/etc/npmrc
+6 verbose title npm install yahoo-finance2@2.9.0
+7 verbose argv "install" "yahoo-finance2@2.9.0"
+8 verbose logfile logs-max:10 dir:/home/screaminginc/.npm/_logs/2026-03-26T06_50_17_002Z-
+9 verbose logfile /home/screaminginc/.npm/_logs/2026-03-26T06_50_17_002Z-debug-0.log
+10 silly logfile start cleaning logs, removing 1 files
+11 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest yahoo-finance2@2.9.0
+15 silly packumentCache full:https://registry.npmjs.org/yahoo-finance2 cache-miss
+16 http cache https://registry.npmjs.org/yahoo-finance2 68ms (cache hit)
+17 silly packumentCache full:https://registry.npmjs.org/yahoo-finance2 set size:534780 disposed:false
+18 silly placeDep ROOT yahoo-finance2@2.9.0 REPLACE for: telegram-stock-bot@1.0.0 want: 2.9.0
+19 silly fetch manifest ajv@8.10.0
+20 silly packumentCache full:https://registry.npmjs.org/ajv cache-miss
+21 silly fetch manifest ajv-formats@2.1.1
+22 silly packumentCache full:https://registry.npmjs.org/ajv-formats cache-miss
+23 silly fetch manifest tough-cookie@^4.1.2
+24 silly packumentCache full:https://registry.npmjs.org/tough-cookie cache-miss
+25 silly fetch manifest @types/tough-cookie@^4.0.2
+26 silly packumentCache full:https://registry.npmjs.org/@types%2ftough-cookie cache-miss
+27 silly fetch manifest tough-cookie-file-store@^2.0.3
+28 silly packumentCache full:https://registry.npmjs.org/tough-cookie-file-store cache-miss
+29 http fetch GET 200 https://registry.npmjs.org/tough-cookie 264ms (cache revalidated)
+30 silly packumentCache full:https://registry.npmjs.org/tough-cookie set size:149007 disposed:false
+31 http fetch GET 200 https://registry.npmjs.org/ajv-formats 268ms (cache revalidated)
+32 silly packumentCache full:https://registry.npmjs.org/ajv-formats set size:141264 disposed:false
+33 http fetch GET 200 https://registry.npmjs.org/ajv 276ms (cache revalidated)
+34 silly packumentCache full:https://registry.npmjs.org/ajv set size:1120197 disposed:false
+35 http fetch GET 200 https://registry.npmjs.org/@types%2ftough-cookie 290ms (cache miss)
+36 silly packumentCache full:https://registry.npmjs.org/@types%2ftough-cookie set size:undefined disposed:false
+37 http fetch GET 200 https://registry.npmjs.org/tough-cookie-file-store 486ms (cache revalidated)
+38 silly packumentCache full:https://registry.npmjs.org/tough-cookie-file-store set size:36428 disposed:false
+39 silly placeDep ROOT @types/tough-cookie@4.0.5 OK for: yahoo-finance2@2.9.0 want: ^4.0.2
+40 silly placeDep node_modules/yahoo-finance2 ajv@8.10.0 OK for: yahoo-finance2@2.9.0 want: 8.10.0
+41 silly placeDep ROOT ajv-formats@2.1.1 OK for: yahoo-finance2@2.9.0 want: 2.1.1
+42 silly placeDep node_modules/yahoo-finance2 tough-cookie@4.1.4 OK for: yahoo-finance2@2.9.0 want: ^4.1.2
+43 silly placeDep ROOT tough-cookie-file-store@2.0.3 OK for: yahoo-finance2@2.9.0 want: ^2.0.3
+44 silly fetch manifest require-from-string@^2.0.2
+45 silly packumentCache full:https://registry.npmjs.org/require-from-string cache-miss
+46 silly fetch manifest json-schema-traverse@^1.0.0
+47 silly packumentCache full:https://registry.npmjs.org/json-schema-traverse cache-miss
+48 silly fetch manifest ajv@^8.0.0
+49 silly packumentCache full:https://registry.npmjs.org/ajv cache-miss
+50 silly fetch manifest tough-cookie@^4.0.0
+51 silly packumentCache full:https://registry.npmjs.org/tough-cookie cache-hit
+52 http cache https://registry.npmjs.org/ajv 17ms (cache hit)
+53 silly packumentCache full:https://registry.npmjs.org/ajv set size:1120197 disposed:false
+54 http fetch GET 200 https://registry.npmjs.org/require-from-string 66ms (cache revalidated)
+55 silly packumentCache full:https://registry.npmjs.org/require-from-string set size:15128 disposed:false
+56 http fetch GET 200 https://registry.npmjs.org/json-schema-traverse 69ms (cache revalidated)
+57 silly packumentCache full:https://registry.npmjs.org/json-schema-traverse set size:23537 disposed:false
+58 silly placeDep node_modules/ajv-formats ajv@8.18.0 OK for: ajv-formats@2.1.1 want: ^8.0.0
+59 silly fetch manifest fast-uri@^3.0.1
+60 silly packumentCache full:https://registry.npmjs.org/fast-uri cache-miss
+61 http fetch GET 200 https://registry.npmjs.org/fast-uri 87ms (cache revalidated)
+62 silly packumentCache full:https://registry.npmjs.org/fast-uri set size:61472 disposed:false
+63 silly placeDep node_modules/tough-cookie-file-store tough-cookie@4.1.4 OK for: tough-cookie-file-store@2.0.3 want: ^4.0.0
+64 silly placeDep ROOT fast-uri@3.1.0 OK for: ajv@8.18.0 want: ^3.0.1
+65 silly placeDep node_modules/ajv-formats json-schema-traverse@1.0.0 OK for: ajv@8.18.0 want: ^1.0.0
+66 silly placeDep ROOT require-from-string@2.0.2 OK for: ajv@8.18.0 want: ^2.0.2
+67 silly placeDep node_modules/yahoo-finance2 json-schema-traverse@1.0.0 OK for: ajv@8.10.0 want: ^1.0.0
+68 silly reify mark retired [ '/home/screaminginc/node_modules/@deno/shim-deno' ]
+69 silly reify mark retired [ '/home/screaminginc/node_modules/@deno/shim-deno-test' ]
+70 silly reify mark retired [ '/home/screaminginc/node_modules/escape-string-regexp' ]
+71 silly reify mark retired [ '/home/screaminginc/node_modules/fetch-mock-cache' ]
+72 silly reify mark retired [ '/home/screaminginc/node_modules/filename-reserved-regex' ]
+73 silly reify mark retired [ '/home/screaminginc/node_modules/filenamify' ]
+74 silly reify mark retired [ '/home/screaminginc/node_modules/filenamify-url' ]
+75 silly reify mark retired [ '/home/screaminginc/node_modules/humanize-url' ]
+76 silly reify mark retired [ '/home/screaminginc/node_modules/isexe' ]
+77 silly reify mark retired [ '/home/screaminginc/node_modules/normalize-url' ]
+78 silly reify mark retired [ '/home/screaminginc/node_modules/strip-outer' ]
+79 silly reify mark retired [ '/home/screaminginc/node_modules/trim-repeated' ]
+80 silly reify mark retired [
+80 silly reify   '/home/screaminginc/node_modules/which',
+80 silly reify   '/home/screaminginc/node_modules/.bin/node-which'
+80 silly reify ]
+81 silly reify mark retired [ '/home/screaminginc/node_modules/yahoo-finance2' ]
+82 silly reify moves {
+82 silly reify   '/home/screaminginc/node_modules/@deno/shim-deno': '/home/screaminginc/node_modules/@deno/.shim-deno-PatQqUsO',
+82 silly reify   '/home/screaminginc/node_modules/@deno/shim-deno-test': '/home/screaminginc/node_modules/@deno/.shim-deno-test-ZEphxfhf',
+82 silly reify   '/home/screaminginc/node_modules/escape-string-regexp': '/home/screaminginc/node_modules/.escape-string-regexp-KpdsdKsC',
+82 silly reify   '/home/screaminginc/node_modules/fetch-mock-cache': '/home/screaminginc/node_modules/.fetch-mock-cache-4eLiek3M',
+82 silly reify   '/home/screaminginc/node_modules/filename-reserved-regex': '/home/screaminginc/node_modules/.filename-reserved-regex-65crn1uH',
+82 silly reify   '/home/screaminginc/node_modules/filenamify': '/home/screaminginc/node_modules/.filenamify-hbOLL9eL',
+82 silly reify   '/home/screaminginc/node_modules/filenamify-url': '/home/screaminginc/node_modules/.filenamify-url-cRcAPN0N',
+82 silly reify   '/home/screaminginc/node_modules/humanize-url': '/home/screaminginc/node_modules/.humanize-url-T8YnE0gf',
+82 silly reify   '/home/screaminginc/node_modules/isexe': '/home/screaminginc/node_modules/.isexe-eLukrd6s',
+82 silly reify   '/home/screaminginc/node_modules/normalize-url': '/home/screaminginc/node_modules/.normalize-url-YMdylxSs',
+82 silly reify   '/home/screaminginc/node_modules/strip-outer': '/home/screaminginc/node_modules/.strip-outer-Zd3zXPFw',
+82 silly reify   '/home/screaminginc/node_modules/trim-repeated': '/home/screaminginc/node_modules/.trim-repeated-TQQqbUqa',
+82 silly reify   '/home/screaminginc/node_modules/which': '/home/screaminginc/node_modules/.which-dKa4zVcG',
+82 silly reify   '/home/screaminginc/node_modules/.bin/node-which': '/home/screaminginc/node_modules/.bin/.node-which-U7URPQse',
+82 silly reify   '/home/screaminginc/node_modules/yahoo-finance2': '/home/screaminginc/node_modules/.yahoo-finance2-n91JIOz7'
+82 silly reify }
+83 silly audit bulk request {
+83 silly audit   '@cypress/request': [ '3.0.10' ],
+83 silly audit   '@cypress/request-promise': [ '5.0.0' ],
+83 silly audit   'tough-cookie': [ '4.1.4', '2.5.0', '5.1.2' ],
+83 silly audit   '@types/node': [ '18.19.130' ],
+83 silly audit   '@types/node-fetch': [ '2.6.13' ],
+83 silly audit   'abort-controller': [ '3.0.0' ],
+83 silly audit   agentkeepalive: [ '4.6.0' ],
+83 silly audit   ajv: [ '6.14.0', '8.10.0', '8.18.0' ],
+83 silly audit   'array-buffer-byte-length': [ '1.0.2' ],
+83 silly audit   'array.prototype.findindex': [ '2.2.4' ],
+83 silly audit   'arraybuffer.prototype.slice': [ '1.0.4' ],
+83 silly audit   asn1: [ '0.2.6' ],
+83 silly audit   'assert-plus': [ '1.0.0' ],
+83 silly audit   'async-function': [ '1.0.0' ],
+83 silly audit   asynckit: [ '0.4.0' ],
+83 silly audit   'available-typed-arrays': [ '1.0.7' ],
+83 silly audit   'aws-sign2': [ '0.7.0' ],
+83 silly audit   aws4: [ '1.13.2' ],
+83 silly audit   'bcrypt-pbkdf': [ '1.0.2' ],
+83 silly audit   bl: [ '1.2.3' ],
+83 silly audit   bluebird: [ '3.7.2' ],
+83 silly audit   'call-bind': [ '1.0.8' ],
+83 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+83 silly audit   'call-bound': [ '1.0.4' ],
+83 silly audit   caseless: [ '0.12.0' ],
+83 silly audit   'combined-stream': [ '1.0.8' ],
+83 silly audit   'core-util-is': [ '1.0.3', '1.0.2' ],
+83 silly audit   dashdash: [ '1.14.1' ],
+83 silly audit   'data-view-buffer': [ '1.0.2' ],
+83 silly audit   'data-view-byte-length': [ '1.0.2' ],
+83 silly audit   'data-view-byte-offset': [ '1.0.1' ],
+83 silly audit   debug: [ '3.2.7' ],
+83 silly audit   'define-data-property': [ '1.1.4' ],
+83 silly audit   'define-properties': [ '1.2.1' ],
+83 silly audit   'delayed-stream': [ '1.0.0' ],
+83 silly audit   'dunder-proto': [ '1.0.1' ],
+83 silly audit   'ecc-jsbn': [ '0.1.2' ],
+83 silly audit   'end-of-stream': [ '1.4.5' ],
+83 silly audit   'es-abstract': [ '1.24.1' ],
+83 silly audit   'es-define-property': [ '1.0.1' ],
+83 silly audit   'es-errors': [ '1.3.0' ],
+83 silly audit   'es-object-atoms': [ '1.1.1' ],
+83 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+83 silly audit   'es-shim-unscopables': [ '1.1.0' ],
+83 silly audit   'es-to-primitive': [ '1.3.0' ],
+83 silly audit   'event-target-shim': [ '5.0.1' ],
+83 silly audit   eventemitter3: [ '3.1.2' ],
+83 silly audit   extend: [ '3.0.2' ],
+83 silly audit   extsprintf: [ '1.3.0' ],
+83 silly audit   'fast-deep-equal': [ '3.1.3' ],
+83 silly audit   'fast-json-stable-stringify': [ '2.1.0' ],
+83 silly audit   'file-type': [ '3.9.0' ],
+83 silly audit   'for-each': [ '0.3.5' ],
+83 silly audit   'forever-agent': [ '0.6.1' ],
+83 silly audit   'form-data': [ '4.0.5', '2.3.3' ],
+83 silly audit   'form-data-encoder': [ '1.7.2' ],
+83 silly audit   'formdata-node': [ '4.4.1' ],
+83 silly audit   'function-bind': [ '1.1.2' ],
+83 silly audit   'function.prototype.name': [ '1.1.8' ],
+83 silly audit   'functions-have-names': [ '1.2.3' ],
+83 silly audit   'generator-function': [ '2.0.1' ],
+83 silly audit   'get-intrinsic': [ '1.3.0' ],
+83 silly audit   'get-proto': [ '1.0.1' ],
+83 silly audit   'get-symbol-description': [ '1.1.0' ],
+83 silly audit   getpass: [ '0.1.7' ],
+83 silly audit   globalthis: [ '1.0.4' ],
+83 silly audit   gopd: [ '1.2.0' ],
+83 silly audit   'har-schema': [ '2.0.0' ],
+83 silly audit   'har-validator': [ '5.1.5' ],
+83 silly audit   'has-bigints': [ '1.1.0' ],
+83 silly audit   'has-property-descriptors': [ '1.0.2' ],
+83 silly audit   'has-proto': [ '1.2.0' ],
+83 silly audit   'has-symbols': [ '1.1.0' ],
+83 silly audit   'has-tostringtag': [ '1.0.2' ],
+83 silly audit   hasown: [ '2.0.2' ],
+83 silly audit   'http-signature': [ '1.4.0', '1.2.0' ],
+83 silly audit   'humanize-ms': [ '1.2.1' ],
+83 silly audit   inherits: [ '2.0.4' ],
+83 silly audit   'internal-slot': [ '1.1.0' ],
+83 silly audit   'is-array-buffer': [ '3.0.5' ],
+83 silly audit   'is-async-function': [ '2.1.1' ],
+83 silly audit   'is-bigint': [ '1.1.0' ],
+83 silly audit   'is-boolean-object': [ '1.2.2' ],
+83 silly audit   'is-callable': [ '1.2.7' ],
+83 silly audit   'is-data-view': [ '1.0.2' ],
+83 silly audit   'is-date-object': [ '1.1.0' ],
+83 silly audit   'is-finalizationregistry': [ '1.1.1' ],
+83 silly audit   'is-generator-function': [ '1.1.2' ],
+83 silly audit   'is-map': [ '2.0.3' ],
+83 silly audit   'is-negative-zero': [ '2.0.3' ],
+83 silly audit   'is-number-object': [ '1.1.1' ],
+83 silly audit   'is-regex': [ '1.2.1' ],
+83 silly audit   'is-set': [ '2.0.3' ],
+83 silly audit   'is-shared-array-buffer': [ '1.0.4' ],
+83 silly audit   'is-string': [ '1.1.1' ],
+83 silly audit   'is-symbol': [ '1.1.1' ],
+83 silly audit   'is-typed-array': [ '1.1.15' ],
+83 silly audit   'is-typedarray': [ '1.0.0' ],
+83 silly audit   'is-weakmap': [ '2.0.2' ],
+83 silly audit   'is-weakref': [ '1.1.1' ],
+83 silly audit   'is-weakset': [ '2.0.4' ],
+83 silly audit   isarray: [ '1.0.0', '2.0.5' ],
+83 silly audit   isstream: [ '0.1.2' ],
+83 silly audit   jsbn: [ '0.1.1' ],
+83 silly audit   'json-schema': [ '0.4.0' ],
+83 silly audit   'json-schema-traverse': [ '0.4.1', '1.0.0' ],
+83 silly audit   'json-stringify-safe': [ '5.0.1' ],
+83 silly audit   jsprim: [ '2.0.2', '1.4.2' ],
+83 silly audit   lodash: [ '4.17.23' ],
+83 silly audit   'math-intrinsics': [ '1.1.0' ],
+83 silly audit   mime: [ '1.6.0' ],
+83 silly audit   'mime-db': [ '1.52.0' ],
+83 silly audit   'mime-types': [ '2.1.35' ],
+83 silly audit   ms: [ '2.1.3' ],
+83 silly audit   'node-domexception': [ '1.0.0' ],
+83 silly audit   'node-fetch': [ '2.7.0' ],
+83 silly audit   'node-telegram-bot-api': [ '0.67.0' ],
+83 silly audit   'oauth-sign': [ '0.9.0' ],
+83 silly audit   'object-inspect': [ '1.13.4' ],
+83 silly audit   'object-keys': [ '1.1.1' ],
+83 silly audit   'object.assign': [ '4.1.7' ],
+83 silly audit   once: [ '1.4.0' ],
+83 silly audit   openai: [ '4.104.0' ],
+83 silly audit   'own-keys': [ '1.0.1' ],
+83 silly audit   'performance-now': [ '2.1.0' ],
+83 silly audit   'possible-typed-array-names': [ '1.1.0' ],
+83 silly audit   'process-nextick-args': [ '2.0.1' ],
+83 silly audit   psl: [ '1.15.0' ],
+83 silly audit   pump: [ '2.0.1' ],
+83 silly audit   punycode: [ '2.3.1' ],
+83 silly audit   qs: [ '6.14.2', '6.5.5' ],
+83 silly audit   querystringify: [ '2.2.0' ],
+83 silly audit   'readable-stream': [ '2.3.8' ],
+83 silly audit   'safe-buffer': [ '5.1.2', '5.2.1' ],
+83 silly audit   'reflect.getprototypeof': [ '1.0.10' ],
+83 silly audit   'regexp.prototype.flags': [ '1.5.4' ],
+83 silly audit   request: [ '2.88.2' ],
+83 silly audit   'request-promise-core': [ '1.1.3' ],
+83 silly audit   uuid: [ '3.4.0', '8.3.2' ],
+83 silly audit   'requires-port': [ '1.0.0' ],
+83 silly audit   'safe-array-concat': [ '1.1.3' ],
+83 silly audit   'safe-push-apply': [ '1.0.0' ],
+83 silly audit   'safe-regex-test': [ '1.1.0' ],
+83 silly audit   'safer-buffer': [ '2.1.2' ],
+83 silly audit   'set-function-length': [ '1.2.2' ],
+83 silly audit   'set-function-name': [ '2.0.2' ],
+83 silly audit   'set-proto': [ '1.0.0' ],
+83 silly audit   'side-channel': [ '1.1.0' ],
+83 silly audit   'side-channel-list': [ '1.0.0' ],
+83 silly audit   'side-channel-map': [ '1.0.1' ],
+83 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+83 silly audit   sshpk: [ '1.18.0' ],
+83 silly audit   'stealthy-require': [ '1.1.1' ],
+83 silly audit   'stop-iteration-iterator': [ '1.1.0' ],
+83 silly audit   string_decoder: [ '1.1.1' ],
+83 silly audit   'string.prototype.trim': [ '1.2.10' ],
+83 silly audit   'string.prototype.trimend': [ '1.0.9' ],
+83 silly audit   'string.prototype.trimstart': [ '1.0.8' ],
+83 silly audit   tldts: [ '6.1.86' ],
+83 silly audit   'tldts-core': [ '6.1.86' ],
+83 silly audit   tr46: [ '0.0.3' ],
+83 silly audit   'tunnel-agent': [ '0.6.0' ],
+83 silly audit   tweetnacl: [ '0.14.5' ],
+83 silly audit   'typed-array-buffer': [ '1.0.3' ],
+83 silly audit   'typed-array-byte-length': [ '1.0.3' ],
+83 silly audit   'typed-array-byte-offset': [ '1.0.4' ],
+83 silly audit   'typed-array-length': [ '1.0.7' ],
+83 silly audit   'unbox-primitive': [ '1.1.0' ],
+83 silly audit   'undici-types': [ '5.26.5' ],
+83 silly audit   universalify: [ '0.2.0' ],
+83 silly audit   'uri-js': [ '4.4.1' ],
+83 silly audit   'url-parse': [ '1.5.10' ],
+83 silly audit   'util-deprecate': [ '1.0.2' ],
+83 silly audit   verror: [ '1.10.0' ],
+83 silly audit   'web-streams-polyfill': [ '4.0.0-beta.3' ],
+83 silly audit   'webidl-conversions': [ '3.0.1' ],
+83 silly audit   'whatwg-url': [ '5.0.0' ],
+83 silly audit   'which-boxed-primitive': [ '1.1.1' ],
+83 silly audit   'which-builtin-type': [ '1.2.1' ],
+83 silly audit   'which-collection': [ '1.0.2' ],
+83 silly audit   'which-typed-array': [ '1.1.20' ],
+83 silly audit   wrappy: [ '1.0.2' ],
+83 silly audit   'yahoo-finance2': [ '2.9.0' ],
+83 silly audit   '@types/tough-cookie': [ '4.0.5' ],
+83 silly audit   'ajv-formats': [ '2.1.1' ],
+83 silly audit   'tough-cookie-file-store': [ '2.0.3' ],
+83 silly audit   'fast-uri': [ '3.1.0' ],
+83 silly audit   'require-from-string': [ '2.0.2' ]
+83 silly audit }
+84 http cache require-from-string@https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz 0ms (cache hit)
+85 http cache tough-cookie-file-store@https://registry.npmjs.org/tough-cookie-file-store/-/tough-cookie-file-store-2.0.3.tgz 0ms (cache hit)
+86 http cache fast-uri@https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.0.tgz 0ms (cache hit)
+87 http cache ajv-formats@https://registry.npmjs.org/ajv-formats/-/ajv-formats-2.1.1.tgz 0ms (cache hit)
+88 http cache @types/tough-cookie@https://registry.npmjs.org/@types/tough-cookie/-/tough-cookie-4.0.5.tgz 0ms (cache hit)
+89 http cache yahoo-finance2@https://registry.npmjs.org/yahoo-finance2/-/yahoo-finance2-2.9.0.tgz 0ms (cache hit)
+90 http cache json-schema-traverse@https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz 0ms (cache hit)
+91 http cache ajv@https://registry.npmjs.org/ajv/-/ajv-8.18.0.tgz 0ms (cache hit)
+92 http cache json-schema-traverse@https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz 0ms (cache hit)
+93 http cache tough-cookie@https://registry.npmjs.org/tough-cookie/-/tough-cookie-4.1.4.tgz 0ms (cache hit)
+94 http cache ajv@https://registry.npmjs.org/ajv/-/ajv-8.10.0.tgz 0ms (cache hit)
+95 http cache tough-cookie@https://registry.npmjs.org/tough-cookie/-/tough-cookie-4.1.4.tgz 0ms (cache hit)
+96 silly tarball no local data for ajv-formats@https://registry.npmjs.org/ajv-formats/-/ajv-formats-2.1.1.tgz. Extracting by manifest.
+97 silly tarball no local data for @types/tough-cookie@https://registry.npmjs.org/@types/tough-cookie/-/tough-cookie-4.0.5.tgz. Extracting by manifest.
+98 silly tarball no local data for yahoo-finance2@https://registry.npmjs.org/yahoo-finance2/-/yahoo-finance2-2.9.0.tgz. Extracting by manifest.
+99 silly tarball no local data for ajv@https://registry.npmjs.org/ajv/-/ajv-8.10.0.tgz. Extracting by manifest.
+100 http fetch GET 200 https://registry.npmjs.org/@types/tough-cookie/-/tough-cookie-4.0.5.tgz 121ms (cache miss)
+101 http fetch GET 200 https://registry.npmjs.org/ajv-formats/-/ajv-formats-2.1.1.tgz 144ms (cache miss)
+102 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 270ms
+103 silly audit report {
+103 silly audit report   'tough-cookie': [
+103 silly audit report     {
+103 silly audit report       id: 1097682,
+103 silly audit report       url: 'https://github.com/advisories/GHSA-72xf-g2v4-qvf3',
+103 silly audit report       title: 'tough-cookie Prototype Pollution vulnerability',
+103 silly audit report       severity: 'moderate',
+103 silly audit report       vulnerable_versions: '<4.1.3',
+103 silly audit report       cwe: [Array],
+103 silly audit report       cvss: [Object]
+103 silly audit report     }
+103 silly audit report   ],
+103 silly audit report   ajv: [
+103 silly audit report     {
+103 silly audit report       id: 1113715,
+103 silly audit report       url: 'https://github.com/advisories/GHSA-2g4f-4pwh-qvx6',
+103 silly audit report       title: 'ajv has ReDoS when using `$data` option',
+103 silly audit report       severity: 'moderate',
+103 silly audit report       vulnerable_versions: '>=7.0.0-alpha.0 <8.18.0',
+103 silly audit report       cwe: [Array],
+103 silly audit report       cvss: [Object]
+103 silly audit report     }
+103 silly audit report   ],
+103 silly audit report   'form-data': [
+103 silly audit report     {
+103 silly audit report       id: 1109540,
+103 silly audit report       url: 'https://github.com/advisories/GHSA-fjxv-7rqg-78g4',
+103 silly audit report       title: 'form-data uses unsafe random function in form-data for choosing boundary',
+103 silly audit report       severity: 'critical',
+103 silly audit report       vulnerable_versions: '<2.5.4',
+103 silly audit report       cwe: [Array],
+103 silly audit report       cvss: [Object]
+103 silly audit report     }
+103 silly audit report   ],
+103 silly audit report   qs: [
+103 silly audit report     {
+103 silly audit report       id: 1113719,
+103 silly audit report       url: 'https://github.com/advisories/GHSA-6rw7-vpxm-498p',
+103 silly audit report       title: "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
+103 silly audit report       severity: 'moderate',
+103 silly audit report       vulnerable_versions: '<6.14.1',
+103 silly audit report       cwe: [Array],
+103 silly audit report       cvss: [Object]
+103 silly audit report     }
+103 silly audit report   ],
+103 silly audit report   request: [
+103 silly audit report     {
+103 silly audit report       id: 1096727,
+103 silly audit report       url: 'https://github.com/advisories/GHSA-p8p7-x288-28g6',
+103 silly audit report       title: 'Server-Side Request Forgery in Request',
+103 silly audit report       severity: 'moderate',
+103 silly audit report       vulnerable_versions: '<=2.88.2',
+103 silly audit report       cwe: [Array],
+103 silly audit report       cvss: [Object]
+103 silly audit report     }
+103 silly audit report   ]
+103 silly audit report }
+104 silly packumentCache corgi:https://registry.npmjs.org/tough-cookie cache-miss
+105 silly packumentCache corgi:https://registry.npmjs.org/ajv cache-miss
+106 silly packumentCache corgi:https://registry.npmjs.org/form-data cache-miss
+107 silly packumentCache corgi:https://registry.npmjs.org/qs cache-miss
+108 silly packumentCache corgi:https://registry.npmjs.org/request cache-miss
+109 http fetch GET 200 https://registry.npmjs.org/request 107ms (cache revalidated)
+110 silly packumentCache corgi:https://registry.npmjs.org/request set size:129997 disposed:false
+111 http fetch GET 200 https://registry.npmjs.org/tough-cookie 112ms (cache revalidated)
+112 silly packumentCache corgi:https://registry.npmjs.org/tough-cookie set size:56308 disposed:false
+113 http fetch GET 200 https://registry.npmjs.org/form-data 113ms (cache revalidated)
+114 silly packumentCache corgi:https://registry.npmjs.org/form-data set size:51426 disposed:false
+115 http fetch GET 200 https://registry.npmjs.org/ajv 114ms (cache revalidated)
+116 silly packumentCache corgi:https://registry.npmjs.org/ajv set size:464537 disposed:false
+117 http fetch GET 200 https://registry.npmjs.org/qs 127ms (cache revalidated)
+118 silly packumentCache corgi:https://registry.npmjs.org/qs set size:143799 disposed:false
+119 silly packumentCache corgi:https://registry.npmjs.org/yahoo-finance2 cache-miss
+120 http fetch GET 200 https://registry.npmjs.org/yahoo-finance2/-/yahoo-finance2-2.9.0.tgz 482ms (cache miss)
+121 http fetch GET 200 https://registry.npmjs.org/ajv/-/ajv-8.10.0.tgz 624ms (cache miss)
+122 http fetch GET 200 https://registry.npmjs.org/yahoo-finance2 752ms (cache miss)
+123 silly packumentCache corgi:https://registry.npmjs.org/yahoo-finance2 set size:undefined disposed:false
+124 silly packumentCache corgi:https://registry.npmjs.org/request-promise-core cache-miss
+125 http fetch GET 200 https://registry.npmjs.org/request-promise-core 55ms (cache revalidated)
+126 silly packumentCache corgi:https://registry.npmjs.org/request-promise-core set size:6997 disposed:false
+127 silly packumentCache corgi:https://registry.npmjs.org/@cypress%2frequest-promise cache-miss
+128 http fetch GET 200 https://registry.npmjs.org/@cypress%2frequest-promise 454ms (cache revalidated)
+129 silly packumentCache corgi:https://registry.npmjs.org/@cypress%2frequest-promise set size:4166 disposed:false
+130 silly packumentCache corgi:https://registry.npmjs.org/node-telegram-bot-api cache-miss
+131 http fetch GET 200 https://registry.npmjs.org/node-telegram-bot-api 89ms (cache revalidated)
+132 silly packumentCache corgi:https://registry.npmjs.org/node-telegram-bot-api set size:90673 disposed:false
+133 silly ADD node_modules/require-from-string
+134 silly ADD node_modules/fast-uri
+135 silly ADD node_modules/tough-cookie-file-store
+136 silly ADD node_modules/tough-cookie-file-store/node_modules/tough-cookie
+137 silly ADD node_modules/ajv-formats
+138 silly ADD node_modules/ajv-formats/node_modules/json-schema-traverse
+139 silly ADD node_modules/ajv-formats/node_modules/ajv
+140 silly ADD node_modules/@types/tough-cookie
+141 silly CHANGE node_modules/yahoo-finance2
+142 silly ADD node_modules/yahoo-finance2/node_modules/json-schema-traverse
+143 silly ADD node_modules/yahoo-finance2/node_modules/tough-cookie
+144 silly ADD node_modules/yahoo-finance2/node_modules/ajv
+145 silly REMOVE node_modules/which
+146 silly REMOVE node_modules/trim-repeated
+147 silly REMOVE node_modules/strip-outer
+148 silly REMOVE node_modules/normalize-url
+149 silly REMOVE node_modules/isexe
+150 silly REMOVE node_modules/humanize-url
+151 silly REMOVE node_modules/filenamify-url
+152 silly REMOVE node_modules/filenamify
+153 silly REMOVE node_modules/filename-reserved-regex
+154 silly REMOVE node_modules/fetch-mock-cache
+155 silly REMOVE node_modules/fetch-mock-cache/node_modules/debug
+156 silly REMOVE node_modules/escape-string-regexp
+157 silly REMOVE node_modules/@deno/shim-deno-test
+158 silly REMOVE node_modules/@deno/shim-deno
+159 verbose cwd /home/screaminginc
+160 verbose os Linux 6.6.87.2-microsoft-standard-WSL2
+161 verbose node v22.22.1
+162 verbose npm  v10.9.4
+163 verbose exit 0
+164 info ok
