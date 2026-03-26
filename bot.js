@@ -16,8 +16,20 @@ bot.on('message', async (msg) => {
     try {
         bot.sendMessage(chatId, '📊 Sedang analisa saham...');
 
-        const data = await yahooFinance.quoteSummary(text + '.JK', {
-  modules: ['price']
+        const data = await yahooFinance.quote(text + '.JK');
+
+if (!data || !data.regularMarketPrice) {
+  return bot.sendMessage(chatId, '❌ Data saham tidak ditemukan');
+}
+
+const result = `
+📊 ${data.shortName} (${text}.JK)
+💰 Harga: ${data.regularMarketPrice}
+📈 High: ${data.regularMarketDayHigh}
+📉 Low: ${data.regularMarketDayLow}
+`;
+
+bot.sendMessage(chatId, result);
 });
 
 const price = data.price;
