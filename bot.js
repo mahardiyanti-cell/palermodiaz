@@ -1,4 +1,5 @@
 require('dotenv').config();
+console.log("TOKEN:", process.env.BOT_TOKEN);
 const TelegramBot = require('node-telegram-bot-api');
 const yahooFinance = require('yahoo-finance2').default;
 
