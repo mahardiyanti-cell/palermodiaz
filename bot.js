@@ -1,118 +1,68 @@
-require("dotenv").config();
+import TelegramBot from "node-telegram-bot-api";
+import yahooFinance from "yahoo-finance2";
+import OpenAI from "openai";
 
-const { Telegraf } = require("telegraf");
-const OpenAI = require("openai");
-const { getStockData } = require("./saham");
-// const mongoose = require("mongoose");
-// const User = require("./user");
+// ===== INIT =====
+const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
-// connect DB
-// mongoose.connect(process.env.MONGO_URI)
-//  .then(() => console.log("MongoDB connected 🔥"))
-//  .catch(err => console.log(err));
-
-// init bot
-const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
-
-// init openai
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-bot.on("text", async (ctx) => {
+// ===== GET DATA SAHAM =====
+async function getStockData(symbol) {
   try {
-    const symbol = ctx.message.text.toUpperCase();
-
-    const data = await getStockData(symbol);
-
-    if (!data) {
-      return ctx.reply("❌ Saham tidak ditemukan");
-    }
-
-    const { price, high, low } = data;
-
-    const response = await openai.responses.create({
-      model: "gpt-4o-mini",
-      input: `
-Analisa saham ${symbol}:
-
-Harga: ${price}
-High: ${high}
-Low: ${low}
-
-Berikan:
-- Trend
-- Support resistance
-- Saran entry
-- Risiko
-`
-    });
-
-    await ctx.reply(`
-📊 ${symbol}
-
-Harga: ${price}
-High: ${high}
-Low: ${low}
-
-${response.output_text}
-`);
-
-  } catch (error) {
-    console.error(error);
-    await ctx.reply("❌ Error bot");
+    const data = await yahooFinance.quote(symbol + ".JK");
+    return data;
+  } catch (err) {
+    return null;
   }
-});
+}
+
+// ===== ANALISA SAHAM =====
+async function analyzeStock(symbol) {
+  const data = await getStockData(symbol);
+
+  if (!data || !data.regularMarketPrice) {
+    return "❌ Data saham tidak ditemukan";
+  }
+
+  const prompt = `
+Analisa saham ${symbol}
+
+Harga: ${data.regularMarketPrice}
+High: ${data.regularMarketDayHigh}
+Low: ${data.regularMarketDayLow}
+
+Buat analisa:
+- Trend (bullish/bearish)
+- Support & resistance
+- Rekomendasi (BUY / WAIT / SELL)
+- Target profit (%)
+`;
+
+  const res = await openai.chat.completions.create({
+    model: "gpt-4o-mini",
+    messages: [{ role: "user", content: prompt }],
+  });
+
+  return res.choices[0].message.content;
+}
+
+// ===== TELEGRAM HANDLER =====
+bot.onText(/\/saham (.+)/, async (msg, match) => {
+  const chatId = msg.chat.id;
+  const symbol = match[1].toUpperCase();
+
+  bot.sendMessage(chatId, "📊 Analisa saham...");
+
   try {
-    bot.on("text", async (ctx) => {
-  try {
-    const symbol = ctx.message.text.toUpperCase();
-
-    const data = await getStockData(symbol);
-
-    if (!data) {
-      return ctx.reply("❌ Saham tidak ditemukan");
-    }
-
-    const { price, high, low } = data;
-
-    const response = await openai.responses.create({
-      model: "gpt-4o-mini",
-      input: `
-Analisa saham ${symbol}:
-
-Harga: ${price}
-High: ${high}
-Low: ${low}
-
-Berikan analisa singkat:
-- Trend
-- Support & Resistance
-- Entry point
-- Risiko
-`
-    });
-
-    await ctx.reply(`
-📊 ${symbol}
-
-Harga: ${price}
-High: ${high}
-Low: ${low}
-
-${response.output_text}
-`);
-    
-  } catch (error) {
-    console.error(error);
-    await ctx.reply("❌ Error");
+    const result = await analyzeStock(symbol);
+    bot.sendMessage(chatId, result);
+  } catch (err) {
+    bot.sendMessage(chatId, "❌ Error saat analisa");
   }
 });
 
-    const reply = response.output_text || "Maaf, tidak ada respon 😅";
-
-    await ctx.reply(reply);
-
-});
-bot.launch();
-console.log("Bot PRO jalan 🚀");
+// ===== START =====
+console.log("🚀 Bot jalan...");
